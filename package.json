@@ -9,7 +9,8 @@
   "devDependencies": {
     "esbuild-register": "^3.3.2",
     "nuxt": "3.0.0-rc.1",
-    "prisma": "^3.13.0"
+    "prisma": "^3.13.0",
+    "zod": "^3.15.1"
   },
   "prisma": {
     "seed": "node --require esbuild-register prisma/seed.ts"

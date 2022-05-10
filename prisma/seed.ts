@@ -12,8 +12,8 @@ async function seed() {
   });
   await Promise.all(
     getJokes().map((joke) => {
-      const data = { jokesterId: kody.id, ...joke };
-      return db.joke.create({ data });
+      // const data = { jokesterId: kody.id, ...joke };
+      return db.joke.create({ data: joke });
     })
   );
 }

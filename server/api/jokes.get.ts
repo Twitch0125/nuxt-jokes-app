@@ -2,6 +2,7 @@ import { db } from "~/server/utils/db";
 
 export type JokesGetResponse = Array<{ id: string; name: string }>;
 export default defineEventHandler(async (event) => {
+  console.log("handling get");
   const data: JokesGetResponse = await db.joke.findMany({
     take: 5,
     select: { id: true, name: true },

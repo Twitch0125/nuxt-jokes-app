@@ -10,12 +10,12 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Joke" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "jokesterId" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL,
     "name" TEXT NOT NULL,
     "content" TEXT NOT NULL,
-    CONSTRAINT "Joke_jokesterId_fkey" FOREIGN KEY ("jokesterId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    "userId" TEXT,
+    CONSTRAINT "Joke_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 -- CreateIndex

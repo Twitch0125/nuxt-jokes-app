@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { JokeidGetResponse } from "~/server/api/jokes/[jokeId].get";
+import type { JokeidGetResponse } from "~/server/jokes/[jokeId].get";
 
 const { params } = useRoute();
 const { data: joke } = await useFetch<JokeidGetResponse>(
